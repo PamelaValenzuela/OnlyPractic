@@ -2,6 +2,8 @@ package com.example.appmin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
+import com.example.appmin.databinding.ActivityMainBinding
 
 /*
 *
@@ -41,8 +43,18 @@ import android.os.Bundle
 *      [ ] cliente
 */
 class MainActivity : AppCompatActivity() {
+
+    val objetoviewmodel : PokeViewModelPV by viewModels()
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+
+        val mBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(mBinding.root)
+
+            objetoviewmodel.getPokeVMPV()
+
     }
 }

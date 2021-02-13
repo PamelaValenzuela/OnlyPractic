@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AppMin</string>
+    <string name="todo">TODO</string>
+    <string name="nombre_del_pokemon">Nombre del pokemon</string>
 </resources>
